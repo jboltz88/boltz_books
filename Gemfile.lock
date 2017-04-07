@@ -1,0 +1,19 @@
+PATH
+  remote: ../boltz_works
+  specs:
+    boltz_works (0.1.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    rack (1.6.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  boltz_works!
+  rack (~> 1.6)
+
+BUNDLED WITH
+   1.13.7
