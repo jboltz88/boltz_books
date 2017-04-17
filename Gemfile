@@ -8,4 +8,4 @@ gem 'sqlite3'
 
 gem 'rack', "~> 1.6"
 
-gem 'boltz_record', :path => '../../SQL/boltz_record'
+gem 'boltz_record', path: '../../SQL/boltz_record'
