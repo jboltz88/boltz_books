@@ -1,7 +1,17 @@
+require 'pry'
+
 class BooksController < BoltzWorks::Controller
   def welcome
     render :welcome, book: "Eloquent Ruby"
-    @instance_var = "trying out instance variables"
+  end
+
+  def index
+    render :index, @books = Book.all
+  end
+
+  def show
+    binding.pry
+    render :show, @book = Book.find(params[:id])
   end
 
   def create

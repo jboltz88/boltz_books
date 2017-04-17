@@ -10,6 +10,18 @@ class BoltzBooksTest < Test::Unit::TestCase
     BoltzBooks::Application.new
   end
 
+  def test_it_routes_to_index
+    get "/books/index"
+
+    assert_equal(200, last_response.status)
+  end
+
+  def test_it_routes_to_show
+    get "/books/show"
+
+    assert_equal(200, last_response.status)
+  end
+
   def test_it_routes_to_create
     get "/books/create"
 
