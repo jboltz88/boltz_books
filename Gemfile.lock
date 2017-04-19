@@ -1,28 +1,62 @@
 PATH
+  remote: ../../SQL/boltz_record
+  specs:
+    boltz_record (0.0.0)
+      activesupport
+      pg (~> 0.20.0)
+      sqlite3 (~> 1.3)
+
+PATH
   remote: ../boltz_works
   specs:
     boltz_works (0.1.0)
+      boltz_record
       erubis (~> 2.7)
 
 GEM
   remote: https://rubygems.org/
   specs:
+    activesupport (5.0.2)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (~> 0.7)
+      minitest (~> 5.1)
+      tzinfo (~> 1.1)
+    coderay (1.1.1)
+    concurrent-ruby (1.0.5)
     erubis (2.7.0)
+    i18n (0.8.1)
+    method_source (0.8.2)
+    minitest (5.10.1)
+    pg (0.20.0)
     power_assert (0.2.6)
+    pry (0.10.4)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
+    pry-rails (0.3.6)
+      pry (>= 0.10.4)
     rack (1.6.5)
     rack-test (0.6.3)
       rack (>= 1.0)
+    slop (3.6.0)
+    sqlite3 (1.3.13)
     test-unit (3.1.5)
       power_assert
+    thread_safe (0.3.6)
+    tzinfo (1.2.3)
+      thread_safe (~> 0.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  boltz_record!
   boltz_works!
+  pry-rails
   rack (~> 1.6)
   rack-test
+  sqlite3
   test-unit
 
 BUNDLED WITH
-   1.13.7
+   1.14.6
