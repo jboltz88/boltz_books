@@ -8,7 +8,9 @@ class BooksController < BoltzWorks::Controller
   end
 
   def show
-    render :show, book: Book.find("id")
+    binding.pry
+    book = Book.find(params['id'])
+    render :show, book: book
   end
 
   def create
