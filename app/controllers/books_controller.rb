@@ -1,5 +1,3 @@
-require 'pry'
-
 class BooksController < BoltzWorks::Controller
   def welcome
     render :welcome, book: "Eloquent Ruby"
@@ -10,8 +8,7 @@ class BooksController < BoltzWorks::Controller
   end
 
   def show
-    binding.pry
-    render :show, @book = Book.find(params[:id])
+    render :show, book: Book.find("id")
   end
 
   def create
